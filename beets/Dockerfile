@@ -1,21 +1,22 @@
 FROM ubuntu:precise
 MAINTAINER Fabio Rehm "fgrehm@gmail.com"
 
+# "Preamble" to all images on this repository
 ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list && \
     apt-get update && \
-    apt-get -y upgrade
+    apt-get -y upgrade && \
+    apt-get install -yq vim curl wget
 
-RUN apt-get install -yq python python-pip python-dev python-setuptools
-
-# TODO: Move libyaml-dev above
 RUN apt-get install -yq libyaml-dev
 
-RUN pip install beets
-# TODO: Move flask above
-RUN pip install flask
+# Beets dependencies
+RUN apt-get install -yq python python-pip python-dev python-setuptools
+
+# TODO: Install pip dependencies for other beets plugins
+RUN pip install flask beets
 
 # TODO: Make this a volume
 RUN mkdir -p /.config/beets
