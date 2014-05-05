@@ -1,4 +1,4 @@
-FROM fgrehm/devstep-standalone:0.0.1
+FROM fgrehm/devstep-standalone:v0.0.1
 
 # Heroku toolbelt
 RUN wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
