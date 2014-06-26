@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.2'
 
 # See: https://github.com/rails/rails/issues/13164
 gem 'i18n',                   github: 'svenfuchs/i18n',
@@ -22,6 +22,7 @@ gem 'simple_form',            '3.0.2'
 gem 'enumerize',              '0.8.0'
 gem 'flutie',                 '2.0.0'
 gem 'devise',                 '3.2.4'
+gem 'responders',             '1.0.0'
 
 group :production do
   gem 'rails_12factor',       '0.0.2'
@@ -33,7 +34,7 @@ group :development do
   gem 'foreman',              '0.63.0'
   gem 'jumpup',               '0.0.5'
   gem 'jumpup-heroku',        github: 'Helabs/jumpup-heroku'
-  gem 'jumpup-hipchat',       '0.2.0'
+  gem 'jumpup-hipchat',       '0.3.0'
   gem 'better_errors',        '1.1.0'
   gem 'binding_of_caller',    '0.7.2'
   gem 'letter_opener',        '1.2.0'
